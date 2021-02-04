@@ -10,18 +10,29 @@
   </head>
 
   <body>
+    <div>Bookers</div>
     <% if user_signed_in? %>
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
       <li>
         <%= link_to "logout", destroy_user_session_path, method: :delete %>
       </li>
-    <% else %>
+    <% else %>cd 
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to "About", about_path %>
+      </li>
       <li>
         <%= link_to "sign up", new_user_registration_path %>
       </li>
       <li>
-        <%= link_to "log in", new_user_session_path %>
+        <%= link_to "login", new_user_session_path %>
       </li>
     <% end %>
+    <footer>CopyRight Infratop.inc</footer>
     <%= yield %>
   </body>
 </html>
